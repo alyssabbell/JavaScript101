@@ -78,11 +78,12 @@ upArrow.addEventListener("click", function() {
 
 // If up arrow is clicked, decrement arrowClickCounter by 1
 downArrow.addEventListener("click", function(){
-  arrowClickCounter--;
   if(arrowClickCounter >= 0){
     updateDisplayCounter(downArrow, arrowClickCounter);
+    arrowClickCounter--;
   }
   else {
-    alert("You can't click below 0!");
+    // alert("You can't click below 0.");
+    counterOutput.value = "Arrow up."
   }
 })

@@ -20,9 +20,9 @@ button {
   font-family: 'Roboto Condensed', sans-serif;
   color: #121212;
   background-color: #e55039;
-  font-size: 16px;
+  font-size: 1.2em;
   border-radius: 5px;
-  letter-spacing: .5px;
+  /* letter-spacing: .5px; */
   text-transform: uppercase;
 }
 
@@ -50,7 +50,7 @@ button:hover {
   color: white;
   font-size: 3rem;
   text-transform: uppercase;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 /* Border that holds the buttons and text */
@@ -59,18 +59,20 @@ button:hover {
   /* text-align: center; */
   /* margin: auto 0; */
   width: 350px;
-  height: 250px;
+  height: 200px;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid #ced6e0;
   vertical-align: middle;
+  padding-top: 50px;
 }
 
 .up-arrow-square {
-  display: block;
-  width: 20%;
+  display: inline-block;
+  width: 16%;
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid #ced6e0;
+  margin-right: 15px;
 
 }
 
@@ -79,31 +81,46 @@ button:hover {
 }
 
 .down-arrow-square {
-  display: block;
-  width: 20%;
+  display: inline-block;
+  width: 16%;
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid #ced6e0;
 }
 
 .arrow {
-  border: solid white;
-  border-width: 0 3px 3px 0;
+  border: solid #f8c291;
+  border-width: 0 4px 4px 0;
   display: inline-block;
 
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   padding: 3px;
 }
 
-#displayCounter {
-  float: right;
-  height: 15%;
+/* #displayCounter {
+  /* float: right; */
+  /* height: 4em;
+  font-size: 1em;
+} */
+
+input[type="text"]
+{
+  height: 2rem;
+  font-size: 1.7rem;
+  width: 60%;
+  text-align: center;
+  color: #3c6382;
+  margin-top: 25px;
+  /* background-color: none; */
 }
 
 .up {
   display: block;
   transform: rotate(-135deg);
+  position: relative;
+  left: 12px;
+  top: 7px;
   -webkit-transform: rotate(-135deg);
 
 }
@@ -111,5 +128,8 @@ button:hover {
 .down {
   display: block;
   transform: rotate(45deg);
+  position: relative;
+  left: 12px;
+  bottom: 7px;
   -webkit-transform: rotate(45deg);
 }
