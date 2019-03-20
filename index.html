@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript101</title>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+
+    <fieldset>
+
+      <legend id="my-button-legend"></legend>
+          <button id="my-button">Click Me!</button>
+    </fieldset>
+
+    <fieldset>
+
+        <legend id="to-here-button-legend"></legend>
+        <button id="to-here-button">To Here!</button>
+    </fieldset>
+
+    <script type="text/javascript">
+      var myButton = document.querySelector("#my-button");
+      // can only use this getElementById if item has an id
+      var toHereButton = document.getElementById("#to-here-button");
+      var myButtonClickCounter = 0;
+
+      var myButtonLegend = document.querySelector("#my-button-legend");
+      myButtonLegend.innerHTML = "This button has been clicked " + myButtonClickCounter + " times.";
+
+      var toHereButtonLegend = document.querySelector("#to-here-button-legend");
+      toHereButtonLegend.innerHTML = "Second button";
+
+      function updateLegendLabel(obj, num){
+        //var times = num === 1 ? " time." : " times."
+        var maxClicks = 10;
+        var times = " times.";
+
+        if(myButtonClickCounter === 1) {
+          times = " time.";
+        }
+
+        var message = "This button has been clicked " + num + times;
+
+        if(num > maxClicks)
+        {
+          message = "STOP CLICKING!";
+        }
+
+        obj.innerHTML = message;
+      }
+
+      updateLegendLabel(myButtonLegend, myButtonClickCounter);
+      updateLegendLabel(toHereButtonLegend, myButtonClickCounter);
+
+      // Event listener for first button click
+      myButton.addEventListener("click", function(){
+        // record number of clicks
+        myButtonClickCounter++;
+        updateLegendLabel(myButtonLegend, myButtonClickCounter);
+      })
+
+      toHereButton.addEventListener("click", function(){
+        // record number of clicks
+        myButtonClickCounter++;
+        updateLegendLabel(toHereButtonLegend, myButtonClickCounter);
+      })
+
+      myButton.addEventListener("mouseover", function(){
+        alert("Don't click that!");
+      })
+    </script>
+
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </body>
+</html>

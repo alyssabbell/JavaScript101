@@ -1,0 +1,17 @@
+fieldset {
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 150px;
+  height: 35px;
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#my-button {
+  color: navy;
+}
