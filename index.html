@@ -4,71 +4,46 @@
     <meta charset="utf-8">
     <title>JavaScript101</title>
     <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto|Roboto+Condensed:700" rel="stylesheet">
   </head>
   <body>
 
-    <fieldset>
 
+<!-- Buttons with Legends -->
+    <fieldset>
       <legend id="my-button-legend"></legend>
           <button id="my-button">Click Me!</button>
     </fieldset>
 
     <fieldset>
-
         <legend id="to-here-button-legend"></legend>
-        <button id="to-here-button">To Here!</button>
+        <button id="to-here-button">Click Here!</button>
     </fieldset>
 
-    <script type="text/javascript">
-      var myButton = document.querySelector("#my-button");
-      // can only use this getElementById if item has an id
-      var toHereButton = document.getElementById("#to-here-button");
-      var myButtonClickCounter = 0;
 
-      var myButtonLegend = document.querySelector("#my-button-legend");
-      myButtonLegend.innerHTML = "This button has been clicked " + myButtonClickCounter + " times.";
+<!-- Arrows and output display -->
+<div id="backgroundColor">
+  <div id="arrow-box-message">Click the arrows. Watch what happens.</div>
+  <div id="box">
+    <!-- Up arrow -->
+    <div class="up-arrow-square">
+      <div class="arrow up">
+      </div>
+    </div>
+    <!-- Down arrow -->
+    <div class="down-arrow-square">
+      <div class="arrow down">
+      </div>
+    </div>
+    <!-- Output field -->
+    <div class="display-output">
+      <input type="text" name="" value="0" id="displayCounter">
+    </div>
+  </div>
+</div>
 
-      var toHereButtonLegend = document.querySelector("#to-here-button-legend");
-      toHereButtonLegend.innerHTML = "Second button";
-
-      function updateLegendLabel(obj, num){
-        //var times = num === 1 ? " time." : " times."
-        var maxClicks = 10;
-        var times = " times.";
-
-        if(myButtonClickCounter === 1) {
-          times = " time.";
-        }
-
-        var message = "This button has been clicked " + num + times;
-
-        if(num > maxClicks)
-        {
-          message = "STOP CLICKING!";
-        }
-
-        obj.innerHTML = message;
-      }
-
-      updateLegendLabel(myButtonLegend, myButtonClickCounter);
-      updateLegendLabel(toHereButtonLegend, myButtonClickCounter);
-
-      // Event listener for first button click
-      myButton.addEventListener("click", function(){
-        // record number of clicks
-        myButtonClickCounter++;
-        updateLegendLabel(myButtonLegend, myButtonClickCounter);
-      })
-
-      toHereButton.addEventListener("click", function(){
-        // record number of clicks
-        myButtonClickCounter++;
-        updateLegendLabel(toHereButtonLegend, myButtonClickCounter);
-      })
-
-      myButton.addEventListener("mouseover", function(){
-        alert("Don't click that!");
-      })
+<!-- JS files -->
+    <script type="text/javascript" src="js/master.js">
     </script>
 
     <script

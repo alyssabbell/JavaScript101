@@ -1,17 +1,115 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 fieldset {
   padding: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
+  height: 5em;
+}
+
+legend {
+  font-size: 18px;
+  padding: 0 20px;
 }
 
 button {
   width: 150px;
-  height: 35px;
-  border: 1px solid lightgray;
-  background-color: lightgray;
+  height: 45px;
+  border-style: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #121212;
+  background-color: #e55039;
   font-size: 16px;
   border-radius: 5px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 
-#my-button {
-  color: navy;
+button:focus
+{
+  outline:0;
+}
+
+button:hover {
+  color: white;
+}
+
+#backgroundColor {
+  /* display: block; */
+  text-align: center;
+  /* margin: auto 0; */
+
+  background-color: #121212;
+  background-image: cover;
+  padding: 80px 0;
+}
+
+#arrow-box-message {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+/* Border that holds the buttons and text */
+#box {
+  display: inline-block;
+  /* text-align: center; */
+  /* margin: auto 0; */
+  width: 350px;
+  height: 250px;
+  border-radius: 5px;
+  border: 1px solid white;
+  vertical-align: middle;
+}
+
+.up-arrow-square {
+  display: block;
+  width: 20%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+
+}
+
+.up-arrow-square:hover, .down-arrow-square:hover {
+  cursor: pointer;
+}
+
+.down-arrow-square {
+  display: block;
+  width: 20%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+
+  height: 30px;
+  width: 30px;
+  padding: 3px;
+}
+
+#displayCounter {
+  float: right;
+  height: 15%;
+}
+
+.up {
+  display: block;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+
+}
+
+.down {
+  display: block;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
