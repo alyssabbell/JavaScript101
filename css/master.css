@@ -25,6 +25,7 @@ button {
   border-radius: 5px;
   /* letter-spacing: .5px; */
   text-transform: uppercase;
+  margin-right: 15px;
 }
 
 button:focus
@@ -34,6 +35,15 @@ button:focus
 
 button:hover {
   color: white;
+}
+
+button[id="myButton-reset"] {
+  width: 120px;
+  height: 40px;
+  background-color: white;
+  color: #e55039;
+  border: 1px solid darkgray;
+  letter-spacing: .5px;
 }
 
 #backgroundColor {
@@ -99,17 +109,6 @@ button:hover {
   padding: 3px;
 }
 
-input[type="text"]
-{
-  height: 2rem;
-  font-size: 1.7rem;
-  width: 60%;
-  text-align: center;
-  color: #3c6382;
-  margin-top: 25px;
-  /* background-color: none; */
-}
-
 .up {
   display: block;
   transform: rotate(-135deg);
@@ -127,4 +126,15 @@ input[type="text"]
   left: 12px;
   bottom: 7px;
   -webkit-transform: rotate(45deg);
+}
+
+input[type="text"]
+{
+  height: 2rem;
+  font-size: 1.7rem;
+  width: 60%;
+  text-align: center;
+  color: #3c6382;
+  margin-top: 25px;
+  /* background-color: none; */
 }

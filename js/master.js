@@ -16,6 +16,10 @@ var upArrow = document.querySelector(".up-arrow-square");
 var downArrow = document.querySelector(".down-arrow-square");
 var arrowClickCounter = 0;
 
+// RESET Buttons
+var resetClickMe = document.querySelector("#myButton-reset");
+resetClickMe.style.visibility= "hidden";
+
 
 // ****************** FUNCTIONS *********************
 function updateLegendLabel(obj, num){
@@ -32,6 +36,7 @@ function updateLegendLabel(obj, num){
   if(num > maxClicks)
   {
     message = "STOP CLICKING!";
+    displayReset();
   }
 
   obj.innerHTML = message;
@@ -41,6 +46,15 @@ function updateLegendLabel(obj, num){
 function updateDisplayCounter(obj, num){
   counterOutput.value = num;
   console.log(num);
+}
+
+// reset buttons
+// -hide button upon load, display when counter hits 10
+// and Stop Clicking message is displayed
+// then reset counter to 0 inside event listener when reset is clicked
+function displayReset() {
+  resetClickMe.style.visibility = "visible";
+  //console.log(resetClickMe);
 }
 // ****************** END FUNCTIONS *********************
 
@@ -65,7 +79,12 @@ toHereButton.addEventListener("click", function(){
 //   alert("Don't click that!");
 // })
 
-
+// for reset button (next to Click Me!)
+resetClickMe.addEventListener("click", function() {
+  myButtonClickCounter = 0;
+  updateLegendLabel(myButtonLegend, myButtonClickCounter);
+  resetClickMe.style.visibility = "hidden";
+})
 
 // *********** up and down arrow ********************
 
@@ -83,7 +102,6 @@ downArrow.addEventListener("click", function(){
     arrowClickCounter--;
   }
   else {
-    // alert("You can't click below 0.");
     counterOutput.value = "Arrow up."
   }
 })
